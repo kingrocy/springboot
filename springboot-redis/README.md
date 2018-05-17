@@ -230,17 +230,15 @@
     首先为我们list中的每个商品id创建一个hash表 里面存放价格和销量
     
     
-        List<Item> items=itemMapper.listItems();
-        for(Item item:items){
-            redisService.hset("item-sort-"+item.getItemId(),"price",item.getItemPrice().toString());
-            redisService.hset("item-sort-"+item.getItemId(),"sales",item.getItemSales().toString());
-        }
-    
+    List<Item> items=itemMapper.listItems();
+    for(Item item:items){
+        redisService.hset("item-sort-"+item.getItemId(),"price",item.getItemPrice().toString());
+        redisService.hset("item-sort-"+item.getItemId(),"sales",item.getItemSales().toString());
+    }
 
 然后通过sort来进行排序
 
-
-    Jedis jedis = redisService.getPool().getResource();
+       Jedis jedis = redisService.getPool().getResource();
 
     String key="item-list-key";
 
@@ -300,7 +298,3 @@
     9.9
     246
 
-
-## 是是是
-
-## [源码地址](https://github.com/kingrocy/springboot/tree/master/springboot-redis)
