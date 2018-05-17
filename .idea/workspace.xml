@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40951fe7-c013-4f1e-a5c5-9347cfbbb78f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-mult-datasource/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/Application.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/bean/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/db/config/DataSourceConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/mapper/UserMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/mapper/UserMapper.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/test/TestShardingJdbc.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/resources/config/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceConfigurer.java" afterPath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceConfigurer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceKey.java" afterPath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceKey.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicDataSourceAspect.java" afterPath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicDataSourceAspect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicRoutingDataSource.java" afterPath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicRoutingDataSource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-mult-datasource/src/main/resources/config/application.properties" afterPath="$PROJECT_DIR$/springboot-mult-datasource/src/main/resources/config/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-sharding-jdbc/pom.xml" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-sharding-jdbc/springboot-sharding-jdbc.iml" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/springboot-sharding-jdbc.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-mult-datasource/README.md" afterPath="$PROJECT_DIR$/springboot-mult-datasource/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,20 +25,6 @@
             <state relative-caret-position="391">
               <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DataSourceConfig.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/db/config/DataSourceConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1139#1140#0" expanded="true" />
-                <element signature="e#1196#1197#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -104,11 +75,21 @@
         <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="253">
-                <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <first_editor relative-caret-position="508">
+                <caret line="229" column="9" lean-forward="false" selection-start-line="229" selection-start-column="9" selection-end-line="229" selection-end-column="9" />
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="33" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -206,6 +187,7 @@
         <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceKey.java" />
         <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceConfigurer.java" />
         <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicDataSourceAspect.java" />
+        <option value="$PROJECT_DIR$/springboot-mult-datasource/README.md" />
       </list>
     </option>
   </component>
@@ -532,7 +514,7 @@
       <workItem from="1526191089239" duration="6120000" />
       <workItem from="1526459600257" duration="8791000" />
       <workItem from="1526522938024" duration="5588000" />
-      <workItem from="1526538838000" duration="10625000" />
+      <workItem from="1526538838000" duration="10800000" />
     </task>
     <task id="LOCAL-00001" summary="是是">
       <created>1526530483377</created>
@@ -555,7 +537,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526533399062</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <created>1526553373803</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1526553373804</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -591,7 +580,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31124000" />
+    <option name="totallyTimeSpent" value="31299000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -847,14 +836,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="33" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/mapper/UserMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -1081,11 +1062,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="33" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="253">
-            <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <first_editor relative-caret-position="508">
+            <caret line="229" column="9" lean-forward="false" selection-start-line="229" selection-start-column="9" selection-end-line="229" selection-end-column="9" />
             <folding />
           </first_editor>
           <second_editor />
