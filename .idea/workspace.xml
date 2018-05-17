@@ -67,8 +67,8 @@
         <entry file="file://$PROJECT_DIR$/springboot-redis/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="450">
-                <caret line="301" column="0" lean-forward="true" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
+              <first_editor relative-caret-position="335">
+                <caret line="298" column="5" lean-forward="true" selection-start-line="298" selection-start-column="5" selection-end-line="298" selection-end-column="5" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -514,7 +514,7 @@
       <updated>1526191077461</updated>
       <workItem from="1526191089239" duration="6120000" />
       <workItem from="1526459600257" duration="8791000" />
-      <workItem from="1526522938024" duration="4056000" />
+      <workItem from="1526522938024" duration="4475000" />
     </task>
     <servers />
   </component>
@@ -551,7 +551,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18967000" />
+    <option name="totallyTimeSpent" value="19386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
@@ -1019,8 +1019,8 @@
     <entry file="file://$PROJECT_DIR$/springboot-redis/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="450">
-            <caret line="301" column="0" lean-forward="true" selection-start-line="301" selection-start-column="0" selection-end-line="301" selection-end-column="0" />
+          <first_editor relative-caret-position="335">
+            <caret line="298" column="5" lean-forward="true" selection-start-line="298" selection-start-column="5" selection-end-line="298" selection-end-column="5" />
             <folding />
           </first_editor>
           <second_editor />
