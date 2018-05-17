@@ -37,6 +37,7 @@ public class DataSourceConfigurer {
      */
     @Bean(name="dynamicDataSource")
     public DataSource dynamicDataSource() {
+
         DynamicRoutingDataSource dynamicRoutingDataSource = new DynamicRoutingDataSource();
 
         Map<Object, Object> dataSourceMap = new HashMap<>(2);

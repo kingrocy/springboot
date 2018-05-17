@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40951fe7-c013-4f1e-a5c5-9347cfbbb78f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-mult-datasource/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/Application.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/bean/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/db/config/DataSourceConfig.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/mapper/UserMapper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/mapper/UserMapper.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/test/TestShardingJdbc.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/resources/config/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceConfigurer.java" afterPath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceConfigurer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceKey.java" afterPath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceKey.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicDataSourceAspect.java" afterPath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicDataSourceAspect.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicRoutingDataSource.java" afterPath="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicRoutingDataSource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-mult-datasource/src/main/resources/config/application.properties" afterPath="$PROJECT_DIR$/springboot-mult-datasource/src/main/resources/config/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-sharding-jdbc/pom.xml" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/springboot-sharding-jdbc/springboot-sharding-jdbc.iml" afterPath="$PROJECT_DIR$/springboot-sharding-jdbc/springboot-sharding-jdbc.iml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -19,11 +34,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="TestRedisSort.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/test/TestRedisSort.java">
+      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/resources/config/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1097">
-              <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+            <state relative-caret-position="391">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataSourceConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/db/config/DataSourceConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1139#1140#0" expanded="true" />
+                <element signature="e#1196#1197#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataSourceConfigurer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceConfigurer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="76" column="1" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="76" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -31,32 +70,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/resources/config/application.properties">
+      <file leaf-file-name="TargetDataSource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/TargetDataSource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+            <state relative-caret-position="69">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="9" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/resources/application.yml">
+      <file leaf-file-name="DataSourceKey.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceKey.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <state relative-caret-position="46">
+              <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DynamicDataSourceAspect.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicDataSourceAspect.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="418">
+              <caret line="48" column="1" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="48" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
+        <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="299">
-                <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <first_editor relative-caret-position="253">
+                <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -64,85 +113,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-redis/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="344">
-                <caret line="299" column="0" lean-forward="true" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="0" />
-                <folding />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="DynamicDataSourceContextHolder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicDataSourceContextHolder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+            <state relative-caret-position="-367">
+              <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+              <folding>
+                <element signature="e#652#653#0" expanded="true" />
+                <element signature="e#694#695#0" expanded="true" />
+                <element signature="e#980#981#0" expanded="true" />
+                <element signature="e#1031#1032#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DynamicRoutingDataSource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicRoutingDataSource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="92">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RedisService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/service/RedisService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="14329">
-              <caret line="632" column="41" lean-forward="false" selection-start-line="632" selection-start-column="41" selection-end-line="632" selection-end-column="41" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Item.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/bean/Item.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding>
-                <element signature="e#255#256#0" expanded="true" />
-                <element signature="e#284#285#0" expanded="true" />
-                <element signature="e#329#330#0" expanded="true" />
-                <element signature="e#365#366#0" expanded="true" />
-                <element signature="e#401#402#0" expanded="true" />
-                <element signature="e#433#434#0" expanded="true" />
-                <element signature="e#483#484#0" expanded="true" />
-                <element signature="e#525#526#0" expanded="true" />
-                <element signature="e#559#560#0" expanded="true" />
-                <element signature="e#591#592#0" expanded="true" />
-                <element signature="e#639#640#0" expanded="true" />
-                <element signature="e#681#682#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/mapper/ItemMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/mapper/ItemMapper.xml">
+      <file leaf-file-name="AbstractRoutingDataSource.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.3.10.RELEASE/spring-jdbc-4.3.10.RELEASE.jar!/org/springframework/jdbc/datasource/lookup/AbstractRoutingDataSource.class">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="46">
-              <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
-              <folding>
-                <marker date="1526466806732" expanded="true" signature="293:409" ph="select item_... item" />
-                <marker date="1526466806732" expanded="true" signature="509:591" ph="select item_... item" />
-              </folding>
+              <caret line="5" column="51" lean-forward="true" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -157,18 +158,18 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>DataSourceKey</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/springboot-sharding-jdbc/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceKey.java" />
-        <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicDataSourceAspect.java" />
         <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicDataSourceContextHolder.java" />
-        <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicRoutingDataSource.java" />
-        <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceConfigurer.java" />
         <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/bean/User.java" />
         <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/mapper/UserMapper.java" />
         <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/Application.java" />
@@ -185,11 +186,26 @@
         <option value="$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/mapper/ItemMapper.java" />
         <option value="$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/mapper/ItemMapper.xml" />
         <option value="$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/test/TestRedisSort.java" />
-        <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/resources/config/application.properties" />
         <option value="$PROJECT_DIR$/springboot-redis/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/springboot-redis/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/resources/config/application.properties" />
+        <option value="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/mapper/UserMapper.xml" />
+        <option value="$PROJECT_DIR$/springboot-sharding-jdbc/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/test/TestRedisSort.java" />
+        <option value="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/bean/User.java" />
+        <option value="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/test/TestShardingJdbc.java" />
+        <option value="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/resources/config/application.yml" />
+        <option value="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/resources/config/application.properties-" />
+        <option value="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/resources/config/application.properties" />
+        <option value="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/db/config/DBConfig.java" />
+        <option value="$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/db/config/DataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicRoutingDataSource.java" />
+        <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceKey.java" />
+        <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceConfigurer.java" />
+        <option value="$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicDataSourceAspect.java" />
       </list>
     </option>
   </component>
@@ -224,7 +240,7 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
+    <option name="x" value="1912" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -261,9 +277,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -274,12 +288,14 @@
             <path>
               <item name="springboot" type="b2602c69:ProjectViewProjectNode" />
               <item name="springboot" type="462c0819:PsiDirectoryNode" />
-              <item name="springboot-redis" type="462c0819:PsiDirectoryNode" />
+              <item name="springboot-mult-datasource" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -298,22 +314,23 @@
     <property name="RequestMappingsPanelOrder2" value="2" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\work\workspace\yun\springboot\springboot-redis" />
-      <recent name="D:\work\workspace\yun\springboot\springboot-redis\src\main\java\com\yunhui\springboot\bean" />
-      <recent name="D:\work\workspace\yun\springboot\springboot-mult-datasource\src\main\resources" />
-      <recent name="D:\work\workspace\yun\springboot\springboot-mult-datasource\src\main\java\com\yunhui\mapper" />
-      <recent name="D:\work\workspace\yun\springboot\springboot-mult-datasource\src\main\java\com\yunhui\db\config" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\workspace\yun\springboot\springboot-sharding-jdbc\src\main\resources" />
+      <recent name="D:\work\workspace\yun\springboot\springboot-redis\src\main\java\com\yunhui\springboot\mapper" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.yunhui.test" />
+      <recent name="com.yunhui" />
       <recent name="com.yunhui.springboot.test" />
       <recent name="com.yunhui.springboot.service" />
       <recent name="com.yunhui.springboot.config" />
-      <recent name="com.yunhui.springboot" />
-      <recent name="com.yunhui" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\work\workspace\yun\springboot\springboot-redis\src\main\java\com\yunhui\springboot\mapper" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\workspace\yun\springboot\springboot-mult-datasource" />
+      <recent name="D:\work\workspace\yun\springboot\springboot-sharding-jdbc\src\main\java\com\yunhui\db" />
+      <recent name="D:\work\workspace\yun\springboot\springboot-sharding-jdbc\src\main\java\com\yunhui" />
+      <recent name="D:\work\workspace\yun\springboot\springboot-sharding-jdbc\src\main\resources" />
+      <recent name="D:\work\workspace\yun\springboot\springboot-redis" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -328,30 +345,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestRedisSort.test2">
+  <component name="RunManager" selected="JUnit.TestShardingJdbc.test1">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yunhui.Application" />
       <module name="springboot-mult-datasource" />
       <envs />
-    </configuration>
-    <configuration name="TestRedisSort.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot-redis" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.yunhui.springboot.test" />
-      <option name="MAIN_CLASS_NAME" value="com.yunhui.springboot.test.TestRedisSort" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
     </configuration>
     <configuration name="TestRedisSort.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springboot-redis" />
@@ -410,13 +408,32 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="TestRedisSort.testExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="springboot-redis" />
+    <configuration name="TestShardingJdbc.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-sharding-jdbc" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.yunhui.springboot.test" />
-      <option name="MAIN_CLASS_NAME" value="com.yunhui.springboot.test.TestRedisSort" />
-      <option name="METHOD_NAME" value="testExists" />
+      <option name="PACKAGE_NAME" value="com.yunhui.test" />
+      <option name="MAIN_CLASS_NAME" value="com.yunhui.test.TestShardingJdbc" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TestShardingJdbc.test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springboot-sharding-jdbc" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.yunhui.test" />
+      <option name="MAIN_CLASS_NAME" value="com.yunhui.test.TestShardingJdbc" />
+      <option name="METHOD_NAME" value="test2" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -486,19 +503,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.Application" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.TestRedisSort.testExists" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.TestRedisSort.test" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.TestRedisSort.test1" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.TestRedisSort.test3" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.TestRedisSort.test2" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestRedisSort.test1" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestRedisSort.test3" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestRedisSort.test2" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.TestShardingJdbc.test1" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.TestShardingJdbc.test2" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.TestRedisSort.test2" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TestRedisSort.test3" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.TestRedisSort.test1" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.TestRedisSort.test" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.TestRedisSort.testExists" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestShardingJdbc.test1" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestShardingJdbc.test2" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestRedisSort.test2" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.TestRedisSort.test3" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.TestRedisSort.test1" />
       </list>
     </recent_temporary>
   </component>
@@ -514,7 +531,8 @@
       <updated>1526191077461</updated>
       <workItem from="1526191089239" duration="6120000" />
       <workItem from="1526459600257" duration="8791000" />
-      <workItem from="1526522938024" duration="5464000" />
+      <workItem from="1526522938024" duration="5588000" />
+      <workItem from="1526538838000" duration="10625000" />
     </task>
     <task id="LOCAL-00001" summary="是是">
       <created>1526530483377</created>
@@ -530,69 +548,76 @@
       <option name="project" value="LOCAL" />
       <updated>1526530549702</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update">
+      <created>1526533399062</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1526533399062</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestRedisSort_test1 - 2018.05.16 at 20h 02m 38s.xml">
-      <configuration name="TestRedisSort.test1" configurationId="JUnit" />
+    <history-entry file="TestShardingJdbc_test1 - 2018.05.17 at 17h 08m 44s.xml">
+      <configuration name="TestShardingJdbc.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRedisSort_test1 - 2018.05.16 at 20h 03m 24s.xml">
-      <configuration name="TestRedisSort.test1" configurationId="JUnit" />
+    <history-entry file="TestShardingJdbc_test1 - 2018.05.17 at 17h 11m 07s.xml">
+      <configuration name="TestShardingJdbc.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRedisSort_test2 - 2018.05.17 at 11h 10m 33s.xml">
-      <configuration name="TestRedisSort.test2" configurationId="JUnit" />
+    <history-entry file="TestShardingJdbc_test1 - 2018.05.17 at 17h 20m 30s.xml">
+      <configuration name="TestShardingJdbc.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRedisSort_test2 - 2018.05.17 at 11h 11m 30s.xml">
-      <configuration name="TestRedisSort.test2" configurationId="JUnit" />
+    <history-entry file="TestShardingJdbc_test1 - 2018.05.17 at 17h 20m 57s.xml">
+      <configuration name="TestShardingJdbc.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRedisSort_test2 - 2018.05.17 at 11h 14m 44s.xml">
-      <configuration name="TestRedisSort.test2" configurationId="JUnit" />
+    <history-entry file="TestShardingJdbc_test1 - 2018.05.17 at 17h 22m 02s.xml">
+      <configuration name="TestShardingJdbc.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRedisSort_test3 - 2018.05.17 at 11h 06m 17s.xml">
-      <configuration name="TestRedisSort.test3" configurationId="JUnit" />
+    <history-entry file="TestShardingJdbc_test1 - 2018.05.17 at 17h 23m 15s.xml">
+      <configuration name="TestShardingJdbc.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRedisSort_testExists - 2018.05.16 at 18h 02m 57s.xml">
-      <configuration name="TestRedisSort.testExists" configurationId="JUnit" />
+    <history-entry file="TestShardingJdbc_test1 - 2018.05.17 at 17h 26m 47s.xml">
+      <configuration name="TestShardingJdbc.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRedisSort_testExists - 2018.05.16 at 18h 05m 35s.xml">
-      <configuration name="TestRedisSort.testExists" configurationId="JUnit" />
+    <history-entry file="TestShardingJdbc_test1 - 2018.05.17 at 17h 31m 58s.xml">
+      <configuration name="TestShardingJdbc.test1" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRedisSort_testExists - 2018.05.16 at 18h 06m 45s.xml">
-      <configuration name="TestRedisSort.testExists" configurationId="JUnit" />
+    <history-entry file="TestShardingJdbc_test2 - 2018.05.17 at 17h 00m 07s.xml">
+      <configuration name="TestShardingJdbc.test2" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestRedisSort_testExists - 2018.05.16 at 18h 07m 47s.xml">
-      <configuration name="TestRedisSort.testExists" configurationId="JUnit" />
+    <history-entry file="TestShardingJdbc_test2 - 2018.05.17 at 17h 01m 26s.xml">
+      <configuration name="TestShardingJdbc.test2" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20375000" />
+    <option name="totallyTimeSpent" value="31124000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3405876" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37867248" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22707888" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25373134" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -612,130 +637,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/springboot-redis/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/config/RedisConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/service/RedisService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14329">
-          <caret line="632" column="41" lean-forward="true" selection-start-line="632" selection-start-column="41" selection-end-line="632" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/bean/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding>
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#591#592#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#681#682#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/mapper/ItemMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/mapper/ItemMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="58" lean-forward="false" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="58" />
-          <folding>
-            <marker date="1526466806732" expanded="true" signature="293:409" ph="select item_... item" />
-            <marker date="1526466806732" expanded="true" signature="509:591" ph="select item_... item" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.8.2/jedis-2.8.2.jar!/redis/clients/jedis/Jedis.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19780">
-          <caret line="904" column="16" lean-forward="false" selection-start-line="904" selection-start-column="16" selection-end-line="904" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/test/TestRedisSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="53" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/bean/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -799,35 +700,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="10" lean-forward="false" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicDataSourceAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="22" column="66" lean-forward="false" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicRoutingDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="6" column="71" lean-forward="false" selection-start-line="6" selection-start-column="46" selection-end-line="6" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/bean/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -839,16 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="552">
-          <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -869,20 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicDataSourceContextHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/TargetDataSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="18" lean-forward="false" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -891,88 +739,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/pom.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.8.2/jedis-2.8.2.jar!/redis/clients/jedis/Jedis.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
-          <caret line="33" column="19" lean-forward="false" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="19780">
+          <caret line="904" column="16" lean-forward="false" selection-start-line="904" selection-start-column="16" selection-end-line="904" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/Application.java">
+    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/bean/ItemMapper/xml.java" />
+    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/config/RedisConfiguration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+        <state relative-caret-position="322">
+          <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/redis/clients/jedis/2.8.2/jedis-2.8.2.jar!/redis/clients/jedis/Jedis.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19780">
-          <caret line="904" column="16" lean-forward="false" selection-start-line="904" selection-start-column="16" selection-end-line="904" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/bean/ItemMapper/xml.java" />
-    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-redis/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/config/RedisConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="24" column="60" lean-forward="false" selection-start-line="24" selection-start-column="60" selection-end-line="24" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/bean/Item.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
+        <state relative-caret-position="736">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding>
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
-            <element signature="e#329#330#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#525#526#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#591#592#0" expanded="true" />
-            <element signature="e#639#640#0" expanded="true" />
-            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#255#256#0" expanded="false" />
+            <element signature="e#284#285#0" expanded="false" />
+            <element signature="e#329#330#0" expanded="false" />
+            <element signature="e#365#366#0" expanded="false" />
+            <element signature="e#401#402#0" expanded="false" />
+            <element signature="e#433#434#0" expanded="false" />
+            <element signature="e#483#484#0" expanded="false" />
+            <element signature="e#525#526#0" expanded="false" />
+            <element signature="e#559#560#0" expanded="false" />
+            <element signature="e#591#592#0" expanded="false" />
+            <element signature="e#639#640#0" expanded="false" />
+            <element signature="e#681#682#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/mapper/ItemMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
+        <state relative-caret-position="368">
           <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -990,44 +801,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/service/RedisService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14329">
+        <state relative-caret-position="14490">
           <caret line="632" column="41" lean-forward="false" selection-start-line="632" selection-start-column="41" selection-end-line="632" selection-end-column="41" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/test/TestRedisSort.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1097">
-          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/resources/config/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="18" column="7" lean-forward="true" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+        <state relative-caret-position="414">
+          <caret line="18" column="7" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1035,8 +820,8 @@
     <entry file="file://$PROJECT_DIR$/springboot-redis/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="344">
-            <caret line="299" column="0" lean-forward="true" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="0" />
+          <first_editor relative-caret-position="6877">
+            <caret line="299" column="0" lean-forward="false" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
@@ -1048,6 +833,259 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="299">
             <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="33" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/mapper/UserMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <marker date="1526543895066" expanded="true" signature="271:381" ph="select user_... user" />
+            <marker date="1526543895066" expanded="true" signature="479:495" ph="insert into user... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/db/config/RedisConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/db/config/ModuleTableShardingAlgorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-redis/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="30" column="55" lean-forward="false" selection-start-line="30" selection-start-column="55" selection-end-line="30" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/bean/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+          <folding>
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#597#598#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/mapper/UserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="14" column="24" lean-forward="false" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-redis/src/main/java/com/yunhui/springboot/test/TestRedisSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-184">
+          <caret line="76" column="0" lean-forward="false" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/shardingjdbc/sharding-jdbc-core/2.0.3/sharding-jdbc-core-2.0.3.jar!/io/shardingjdbc/core/api/config/TableRuleConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="40" column="18" lean-forward="false" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+          <folding>
+            <element signature="e#2041#2042#0" expanded="true" />
+            <element signature="e#2079#2080#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="18" column="1" lean-forward="false" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/test/TestShardingJdbc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/src/main/resources/config/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/src/main/resources/jdbc.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="10" column="29" lean-forward="false" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/db/config/DBConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="22" column="71" lean-forward="true" selection-start-line="22" selection-start-column="71" selection-end-line="22" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-sharding-jdbc/src/main/java/com/yunhui/db/config/DataSourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1139#1140#0" expanded="true" />
+            <element signature="e#1196#1197#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.3.10.RELEASE/spring-jdbc-4.3.10.RELEASE.jar!/org/springframework/jdbc/datasource/lookup/AbstractRoutingDataSource.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="5" column="51" lean-forward="true" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/resources/config/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/TargetDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="9" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="76" column="1" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="76" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DataSourceKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicDataSourceContextHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-367">
+          <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding>
+            <element signature="e#652#653#0" expanded="true" />
+            <element signature="e#694#695#0" expanded="true" />
+            <element signature="e#980#981#0" expanded="true" />
+            <element signature="e#1031#1032#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicRoutingDataSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/src/main/java/com/yunhui/db/config/DynamicDataSourceAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="48" column="1" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="48" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springboot-mult-datasource/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="253">
+            <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />

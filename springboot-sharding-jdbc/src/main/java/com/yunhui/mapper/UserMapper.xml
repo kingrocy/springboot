@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yunhui.mapper.UserMapper">
+
+
+    <select id="selectByPK" resultType="com.yunhui.bean.User">
+
+        select user_id userId,user_name userName,user_age userAge
+
+        from user
+
+        where user_id =#{userId}
+
+    </select>
+
+
+    <insert id="insertSelective" parameterType="com.yunhui.bean.User">
+
+        insert into user
+
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId!=null">
+                user_id,
+            </if>
+            <if test="userName!=null">
+                user_name,
+            </if>
+            <if test="userAge!=null">
+                user_age,
+            </if>
+        </trim>
+        <trim prefix="values(" suffix=")" suffixOverrides=",">
+            <if test="userId!=null">
+                #{userId},
+            </if>
+            <if test="userName!=null">
+                #{userName},
+            </if>
+            <if test="userAge!=null">
+                #{userAge},
+            </if>
+        </trim>
+    </insert>
+
+</mapper>

@@ -14,7 +14,7 @@ public class DynamicDataSourceAspect {
     private static final Logger logger = LoggerFactory.getLogger(DynamicDataSourceAspect.class);
 
     /**
-     * Switch DataSource
+     * 切换数据源
      *
      * @param point
      * @param targetDataSource
@@ -33,7 +33,7 @@ public class DynamicDataSourceAspect {
     }
 
     /**
-     * Restore DataSource
+     * 重置为默认数据源
      *
      * @param point
      * @param targetDataSource
