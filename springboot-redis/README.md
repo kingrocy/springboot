@@ -1,6 +1,6 @@
 # redis对list进行多种排序输出
 
-参考[:SOTT-Redis命令参考](http://doc.redisfans.com/key/sort.html)
+参考:[SOTT-Redis命令参考](http://doc.redisfans.com/key/sort.html)
 
 ## 核心思路:通过sort命令实现
 
@@ -228,17 +228,19 @@
     那么我们怎么根据商品id对应的商品价格或者是销量排序呢？？？
     
     首先为我们list中的每个商品id创建一个hash表 里面存放价格和销量
+
     
+        List<Item> items=itemMapper.listItems();
+        for(Item item:items){
+            redisService.hset("item-sort-"+item.getItemId(),"price",item.getItemPrice().toString());
+            redisService.hset("item-sort-"+item.getItemId(),"sales",item.getItemSales().toString());
+        }
     
-    List<Item> items=itemMapper.listItems();
-    for(Item item:items){
-        redisService.hset("item-sort-"+item.getItemId(),"price",item.getItemPrice().toString());
-        redisService.hset("item-sort-"+item.getItemId(),"sales",item.getItemSales().toString());
-    }
 
 然后通过sort来进行排序
 
-       Jedis jedis = redisService.getPool().getResource();
+
+    Jedis jedis = redisService.getPool().getResource();
 
     String key="item-list-key";
 
@@ -298,3 +300,6 @@
     9.9
     246
 
+
+
+## [源码地址](https://github.com/kingrocy/springboot/tree/master/springboot-redis)
