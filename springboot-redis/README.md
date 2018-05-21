@@ -230,71 +230,72 @@
     首先为我们list中的每个商品id创建一个hash表 里面存放价格和销量
     
     
-    List<Item> items=itemMapper.listItems();
-    for(Item item:items){
-        redisService.hset("item-sort-"+item.getItemId(),"price",item.getItemPrice().toString());
-        redisService.hset("item-sort-"+item.getItemId(),"sales",item.getItemSales().toString());
-    }
+        List<Item> items=itemMapper.listItems();
+        for(Item item:items){
+            redisService.hset("item-sort-"+item.getItemId(),"price",item.getItemPrice().toString());
+            redisService.hset("item-sort-"+item.getItemId(),"sales",item.getItemSales().toString());
+        }
 
 然后通过sort来进行排序
 
-       Jedis jedis = redisService.getPool().getResource();
-
-    String key="item-list-key";
-
-    String sortKey="item-sort";
-
-    SortingParams sortingParams=new SortingParams();
-
-    ## 这里是根据价格排序 如果想要根据销量排序 则将price改为sales即可
-
-    sortingParams.by(sortKey+"-*->price");
-
-    sortingParams.desc();
-
-    ## 将自身id输出
-    sortingParams.get("#");
     
-    ## 将价格输出
-    sortingParams.get(sortKey+"-*->price");
+        Jedis jedis = redisService.getPool().getResource();
     
-    ## 将销量输出
-    sortingParams.get(sortKey+"-*->sales");
-
-
-    List<String> sort = jedis.sort(key, sortingParams);
-
-    for(String str:sort){
-        System.out.println(str);
-    }
+        String key="item-list-key";
     
-    输出结果
+        String sortKey="item-sort";
     
-    8           --------------------itemId 商品id
-    84.0        --------------------itemPrice 商品价格
-    34          --------------------itemSales 商品销量
-    5
-    72.1
-    19
-    2
-    68.8
-    133
-    1
-    50.2
-    80
-    9
-    49.0
-    208
-    7
-    38.8
-    42
-    6
-    19.9
-    102
-    4
-    18.8
-    1462
-    3
-    9.9
-    246
+        SortingParams sortingParams=new SortingParams();
+    
+        ## 这里是根据价格排序 如果想要根据销量排序 则将price改为sales即可
+    
+        sortingParams.by(sortKey+"-*->price");
+    
+        sortingParams.desc();
+    
+        ## 将自身id输出
+        sortingParams.get("#");
+        
+        ## 将价格输出
+        sortingParams.get(sortKey+"-*->price");
+        
+        ## 将销量输出
+        sortingParams.get(sortKey+"-*->sales");
+    
+    
+        List<String> sort = jedis.sort(key, sortingParams);
+    
+        for(String str:sort){
+            System.out.println(str);
+        }
+        
+        输出结果
+        
+        8           --------------------itemId 商品id
+        84.0        --------------------itemPrice 商品价格
+        34          --------------------itemSales 商品销量
+        5
+        72.1
+        19
+        2
+        68.8
+        133
+        1
+        50.2
+        80
+        9
+        49.0
+        208
+        7
+        38.8
+        42
+        6
+        19.9
+        102
+        4
+        18.8
+        1462
+        3
+        9.9
+        246
 
