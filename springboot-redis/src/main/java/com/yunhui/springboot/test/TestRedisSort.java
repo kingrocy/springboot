@@ -2,6 +2,7 @@ package com.yunhui.springboot.test;
 import com.yunhui.springboot.Application;
 import com.yunhui.springboot.bean.Item;
 import com.yunhui.springboot.mapper.ItemMapper;
+import com.yunhui.springboot.service.RedisLockService;
 import com.yunhui.springboot.service.RedisService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,6 +32,9 @@ public class TestRedisSort {
     @Autowired
     ItemMapper itemMapper;
 
+    @Autowired
+    RedisLockService redisLockService;
+
     @Test
     public void test(){
 
@@ -51,16 +55,6 @@ public class TestRedisSort {
         List<String> strs = redisService.lrange("item-list-key", 0, -1);
         for(String str:strs){
             System.out.println(str);
-        }
-
-    }
-
-    @Test
-    public void test3(){
-        List<Item> items=itemMapper.listItems();
-        for(Item item:items){
-            redisService.hset("item-sort-"+item.getItemId(),"price",item.getItemPrice().toString());
-            redisService.hset("item-sort-"+item.getItemId(),"sales",item.getItemSales().toString());
         }
 
     }
@@ -92,6 +86,22 @@ public class TestRedisSort {
             System.out.println(str);
         }
 
+    }
+
+
+    @Test
+    public void test3(){
+        List<Item> items=itemMapper.listItems();
+        for(Item item:items){
+            redisService.hset("item-sort-"+item.getItemId(),"price",item.getItemPrice().toString());
+            redisService.hset("item-sort-"+item.getItemId(),"sales",item.getItemSales().toString());
+        }
+
+    }
+
+    @Test
+    public void test4(){
+        System.out.println(redisLockService.lock("testkey","testkey",60));
     }
 
 }
