@@ -15,4 +15,10 @@ public interface ItemMapper {
     Item selectByPK(@Param("itemId") Integer itemId);
 
     List<Item> listItems();
+
+    long add(Item item);
+
+    long update(@Param("item")Item item);
+
+    long delete(@Param("itemId")int itemId);
 }

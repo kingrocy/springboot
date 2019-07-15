@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yunhui.mapper.ChapterMapper">
+  <resultMap id="BaseResultMap" type="com.yunhui.bean.Chapter">
+    <id column="chapter_id" jdbcType="BIGINT" property="chapterId" />
+    <result column="chapter_name" jdbcType="VARCHAR" property="chapterName" />
+    <result column="chapter_url" jdbcType="VARCHAR" property="chapterUrl" />
+    <result column="chapter_book_id" jdbcType="BIGINT" property="chapterBookId" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    chapter_id, chapter_name, chapter_url, chapter_book_id
+  </sql>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from chapter
+    where chapter_id = #{chapterId,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    delete from chapter
+    where chapter_id = #{chapterId,jdbcType=BIGINT}
+  </delete>
+
+  <insert id="insertSelective" parameterType="com.yunhui.bean.Chapter">
+    insert into chapter
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="chapterId != null">
+        chapter_id,
+      </if>
+      <if test="chapterName != null">
+        chapter_name,
+      </if>
+      <if test="chapterUrl != null">
+        chapter_url,
+      </if>
+      <if test="chapterBookId != null">
+        chapter_book_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="chapterId != null">
+        #{chapterId,jdbcType=BIGINT},
+      </if>
+      <if test="chapterName != null">
+        #{chapterName,jdbcType=VARCHAR},
+      </if>
+      <if test="chapterUrl != null">
+        #{chapterUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="chapterBookId != null">
+        #{chapterBookId,jdbcType=BIGINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.yunhui.bean.Chapter">
+    update chapter
+    <set>
+      <if test="chapterName != null">
+        chapter_name = #{chapterName,jdbcType=VARCHAR},
+      </if>
+      <if test="chapterUrl != null">
+        chapter_url = #{chapterUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="chapterBookId != null">
+        chapter_book_id = #{chapterBookId,jdbcType=BIGINT},
+      </if>
+    </set>
+    where chapter_id = #{chapterId,jdbcType=BIGINT}
+  </update>
+
+
+  <select id="listChapters" resultMap="BaseResultMap">
+      SELECT
+      <include refid="Base_Column_List"></include>
+      FROM chapter
+      WHERE   chapter_book_id = #{bookId}
+      ORDER BY chapter_id asc
+  </select>
+
+
+  <select id="getChapters" resultType="com.yunhui.bean.Chapter">
+    SELECT
+     c.chapter_id chapterId, c.chapter_name chapterName, d.chapter_content_detail chapterDeatil
+    FROM chapter c,chapter_content d
+    WHERE  c.chapter_id=d.chapter_id and chapter_book_id = #{bookId}
+    ORDER BY c.chapter_id asc
+  </select>
+
+  <select id="getChapterDetail" resultType="com.yunhui.bean.Chapter">
+    SELECT
+     c.chapter_id chapterId, c.chapter_name chapterName, d.chapter_content_detail chapterDeatil
+    FROM chapter c,chapter_content d
+    WHERE  c.chapter_id=d.chapter_id and c.chapter_id = #{chapterId}
+
+  </select>
+
+
+</mapper>

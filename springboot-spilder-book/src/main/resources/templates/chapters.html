@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html  lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>章节列表</title>
+
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script type="application/javascript">
+
+        $(function () {
+            var page=getQueryParam("pageIndex");
+
+            if(page==""){
+                page=1;
+            }
+
+            init(page);
+        });
+
+        //获取对应参数值
+        function getQueryParam(name) {
+            var reg = new RegExp("(^|&)"+name+"=([^&]*)(&|$)");
+            var r =  window.location.search.substr(1).match(reg);
+            var strValue = "";
+            if (r!=null){
+                strValue= decodeURI(r[2]);
+            }
+            return strValue;
+        };
+
+        function init(pageIndex){
+            $.ajax({
+                url:'/listChapters',
+                type:'GET',
+                data:{pageIndex:pageIndex},
+                success:function (res) {
+                    $("#tablist").empty();
+                    $.each(res.list,function (index,chapter) {
+                        var a=$("<a></a>").addClass("chapter").attr("href","/details.html?chapterId="+chapter.chapterId).text(chapter.chapterName);
+                        $("#tablist").append($("<tr></tr>").append("<td>"+chapter.chapterId+"</td>").append($("<td></td>").append(a)));
+                    });
+                    $("#pagination").empty();
+                    $("#pagination").append($("<li></li>").append($("<a aria-label='Previous'></a>").addClass("page").attr("href","/chapters?pageIndex="+res.firstPage).append("<span aria-hidden='true'>&laquo;</span>")));
+                    $.each(res.navigatepageNums,function(index,page){
+                        var a=$("<a></a>").addClass("page").attr("href","/chapters?pageIndex="+page).text(page);
+                        $("#pagination").append($("<li></li>").append(a));
+                        console.log(page==pageIndex)
+                        if(page==pageIndex){
+                            a.parent("li").addClass("active");
+                        }
+
+                    });
+                    $("#pagination").append($("<li></li>").append($("<a aria-label='Next'></a>").addClass("page").attr("href","/chapters?pageIndex="+res.lastPage).append("<span aria-hidden='true'>&raquo;</span>")));
+                }
+            });
+        }
+
+    </script>
+
+</head>
+<body>
+
+
+<div class="container">
+
+    <h4 id="title" align="center">都市奇缘</h4>
+
+
+    <table class="table table-hover">
+        <thead></thead>
+        <tbody id="tablist"></tbody>
+
+    </table>
+
+    <nav aria-label="Page navigation">
+        <ul class="pagination" id="pagination">
+        </ul>
+    </nav>
+</div>
+
+
+</body>
+</html>

@@ -1,14 +1,12 @@
-package com.yunhui.springboot;
-
-import org.mybatis.spring.annotation.MapperScan;
+package com.yunhui.websocket;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 /**
  * @Author: Yun
  * @Description:
- * @Date: Created in 2018-01-18 10:39
+ * @Date: Created in 2018-06-04 17:03
  */
-@MapperScan("com.yunhui.springboot.mapper")
 @SpringBootApplication
 public class Application {
     public static void main(String[] args) {

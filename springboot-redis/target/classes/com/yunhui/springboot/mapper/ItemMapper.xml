@@ -2,25 +2,26 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yunhui.springboot.mapper.ItemMapper">
 
-
     <select id="selectByPK" resultType="com.yunhui.springboot.bean.Item">
-
         select item_id itemId,item_price itemPrice,item_sales itemSales
-
         from item
-
         where item_id =#{itemId}
     </select>
 
-
-
     <select id="listItems" resultType="com.yunhui.springboot.bean.Item">
-
         select item_id itemId,item_price itemPrice,item_sales itemSales
-
         from item
-
     </select>
 
+    <insert id="add" useGeneratedKeys="true" keyProperty="itemId" parameterType="com.yunhui.springboot.bean.Item">
+        insert into item(item_price,item_sales) VALUES (#{itemPrice},#{itemSales})
+    </insert>
 
+    <update id="update">
+        update item set item_price=#{item.itemPrice},item_sales=#{item.itemSales} where item_id=#{item.itemId}
+    </update>
+
+    <delete id="delete">
+        delete from item where item_id=#{itemId}
+    </delete>
 </mapper>

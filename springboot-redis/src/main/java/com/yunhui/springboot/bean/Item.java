@@ -34,4 +34,13 @@ public class Item {
     public void setItemSales(Long itemSales) {
         this.itemSales = itemSales;
     }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "itemId=" + itemId +
+                ", itemPrice=" + itemPrice +
+                ", itemSales=" + itemSales +
+                '}';
+    }
 }

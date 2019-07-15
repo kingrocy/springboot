@@ -25,8 +25,8 @@ public class RedisService {
     /**
      * 判断指定key是否存在
      *
-     * @param key key
      * @return 如果存在，返回true，否则返回false
+     * @param key key
      */
     public boolean exists(final String key) {
         Jedis jedis = null;
