@@ -1,6 +1,7 @@
 package com.yunhui.bean.request;
 
 import com.yunhui.bean.DingTalkOutgoingResponseBean;
+import com.yunhui.enums.MsgTypeEnum;
 import org.springframework.util.StringUtils;
 
 import java.util.Map;
@@ -15,6 +16,11 @@ public abstract class AbstractTextMsgRequestParam extends AbstractMsgRequestPara
 
 
     public abstract String text();
+
+    @Override
+    public MsgTypeEnum msgtype() {
+        return MsgTypeEnum.TEXT;
+    }
 
     @Override
     public Map<String, Object> build() {

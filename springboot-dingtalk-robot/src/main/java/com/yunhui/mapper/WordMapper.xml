@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yunhui.mapper.WordMapper">
+
+
+    <insert id="addWord" parameterType="com.yunhui.bean.Word">
+        insert into word(
+        <trim suffixOverrides=",">
+            <if test="id != null">
+                id,
+            </if>
+            <if test="word != null and word != ''">
+                word,
+            </if>
+            <if test="desc != null and desc != ''">
+                `desc`,
+            </if>
+            <if test="pic != null and pic != ''">
+                pic,
+            </if>
+            <if test="type != null and type != ''">
+                `type`,
+            </if>
+        </trim>
+        )values(
+        <trim suffixOverrides=",">
+
+            <if test="id != null">
+                #{id} ,
+            </if>
+            <if test="word != null and word != ''">
+                #{word},
+            </if>
+            <if test="desc != null and desc != ''">
+                #{desc},
+            </if>
+            <if test="pic != null and pic != ''">
+                #{pic} ,
+            </if>
+            <if test="type != null and type != ''">
+                #{type},
+            </if>
+        </trim>
+        )
+    </insert>
+
+    <select id="randomWord" resultType="com.yunhui.bean.Word">
+        select * from word
+        where id > (
+            select floor(RAND()*(select max(id) from word))
+        )
+        order by id
+        limit 1
+    </select>
+
+
+</mapper>

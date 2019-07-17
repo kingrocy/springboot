@@ -15,16 +15,27 @@ public class CommonMsgRequestParam {
     public static Map<String, Object> text(String text, AtParam atParam) {
         return new AbstractTextMsgRequestParam() {
             @Override
-            public MsgTypeEnum msgtype() {
-                return MsgTypeEnum.TEXT;
-            }
-            @Override
             public AtParam at() {
                 return atParam;
             }
             @Override
             public String text() {
                 return text;
+            }
+        }.build();
+    }
+
+
+    public static Map<String,Object> markdown(MdParam param,AtParam atParam){
+        return new AbstractMdMsgRequestParam() {
+            @Override
+            public AtParam at() {
+                return atParam;
+            }
+
+            @Override
+            public MdParam markdown() {
+                return param;
             }
         }.build();
     }
