@@ -15,8 +15,8 @@ public class RedisLockService {
 
     private static final String LOCK_SUCCESS = "OK";
 
-    /**只在键不存在时，才对键进行设置操作
-     *
+    /**
+     * 只在键不存在时，才对键进行设置操作
      */
     private static final String SET_IF_NOT_EXIST = "NX";
     /**
@@ -35,6 +35,7 @@ public class RedisLockService {
 
     /**
      * redis分布式锁
+     *
      * @param key
      * @param value
      * @param seconds
@@ -45,7 +46,7 @@ public class RedisLockService {
         try {
             jedis = getPool().getResource();
 
-            String result=jedis.set(key,value,SET_IF_NOT_EXIST,SET_WITH_EXPIRE_TIME,seconds);
+            String result = jedis.set(key, value, SET_IF_NOT_EXIST, SET_WITH_EXPIRE_TIME, seconds);
 
             return result;
 

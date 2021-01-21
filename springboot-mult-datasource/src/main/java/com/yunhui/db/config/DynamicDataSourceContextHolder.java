@@ -16,21 +16,21 @@ public class DynamicDataSourceContextHolder {
     public static List<Object> dataSourceKeys = new ArrayList<>();
 
     /**
-     * 转换数据源
-     *
-     * @param key the key
-     */
-    public static void setDataSourceKey(String key) {
-        contextHolder.set(key);
-    }
-
-    /**
      * 获取当前数据源
      *
      * @return data source key
      */
     public static String getDataSourceKey() {
         return contextHolder.get();
+    }
+
+    /**
+     * 转换数据源
+     *
+     * @param key the key
+     */
+    public static void setDataSourceKey(String key) {
+        contextHolder.set(key);
     }
 
     /**

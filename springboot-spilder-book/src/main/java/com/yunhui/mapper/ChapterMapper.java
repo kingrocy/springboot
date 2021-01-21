@@ -19,5 +19,5 @@ public interface ChapterMapper {
 
     List<Chapter> getChapters(@Param("bookId") Long bookId);
 
-    Chapter getChapterDetail(@Param("chapterId")Long chapterId);
+    Chapter getChapterDetail(@Param("chapterId") Long chapterId);
 }

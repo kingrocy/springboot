@@ -28,22 +28,22 @@ public class ChapterCallable implements Callable<String> {
 
     @Override
     public String call() throws Exception {
-        long start=System.currentTimeMillis();
-        for(Chapter chapter:list){
+        long start = System.currentTimeMillis();
+        for (Chapter chapter : list) {
             String content = HttpRequestUtil.doGet(chapter.getChapterUrl(), "gbk");
-            Document document= Jsoup.parse(content);
-            String text=document.select(".novel_content").html();
-            ChapterContent chapterContent=new ChapterContent();
+            Document document = Jsoup.parse(content);
+            String text = document.select(".novel_content").html();
+            ChapterContent chapterContent = new ChapterContent();
             chapterContent.setChapterContentDetail(text);
             chapterContent.setChapterId(chapter.getChapterId());
             try {
                 chapterContentMapper.insertSelective(chapterContent);
-            }catch (Exception e){
-                System.out.println("chapter:"+chapter.getChapterId()+"出错！！");
+            } catch (Exception e) {
+                System.out.println("chapter:" + chapter.getChapterId() + "出错！！");
                 e.printStackTrace();
             }
         }
-        long end=System.currentTimeMillis();
-        return Thread.currentThread().getName()+"结束任务,耗时:"+(end-start)/1000.00+"秒";
+        long end = System.currentTimeMillis();
+        return Thread.currentThread().getName() + "结束任务,耗时:" + (end - start) / 1000.00 + "秒";
     }
 }

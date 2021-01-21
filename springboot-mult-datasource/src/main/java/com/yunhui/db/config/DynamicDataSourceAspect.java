@@ -1,4 +1,5 @@
 package com.yunhui.db.config;
+
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
@@ -28,7 +29,7 @@ public class DynamicDataSourceAspect {
             DynamicDataSourceContextHolder.setDataSourceKey(targetDataSource.value());
             logger.info("Switch DataSource to [{}] in Method [{}]",
                     DynamicDataSourceContextHolder.getDataSourceKey(), point.getSignature());
-            System.out.println("datasource:"+DynamicDataSourceContextHolder.getDataSourceKey());
+            System.out.println("datasource:" + DynamicDataSourceContextHolder.getDataSourceKey());
         }
     }
 

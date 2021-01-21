@@ -34,12 +34,12 @@ public class SpilderTest {
     ChapterMapper chapterMapper;
 
     @Test
-    public void bookSpilder(){
-        String content= HttpRequestUtil.doGet("http://www.163ks.info/files/article/html/0/318/index.html","gb18030");
+    public void bookSpilder() {
+        String content = HttpRequestUtil.doGet("http://www.163ks.info/files/article/html/0/318/index.html", "gb18030");
         Document document = Jsoup.parse(content);
-        String bookName=document.select(".novel_name:eq(0)").text();
-        String bookAuthor=document.select(".novel_info a").text();
-        Book book=new Book();
+        String bookName = document.select(".novel_name:eq(0)").text();
+        String bookAuthor = document.select(".novel_info a").text();
+        Book book = new Book();
         book.setBookName(bookName);
         book.setBookAuthor(bookAuthor);
         book.setBookUrl("http://www.163ks.info/files/article/html/0/318/index.html");
@@ -47,10 +47,10 @@ public class SpilderTest {
     }
 
     @Test
-    public void chapterSpilder(){
-        String url="http://www.163ks.info/files/article/html/0/318/index.html";
+    public void chapterSpilder() {
+        String url = "http://www.163ks.info/files/article/html/0/318/index.html";
 
-        String content=HttpRequestUtil.doGet(url,"gb18030");
+        String content = HttpRequestUtil.doGet(url, "gb18030");
 
         Document document = Jsoup.parse(content);
 
@@ -58,12 +58,12 @@ public class SpilderTest {
 
         Elements uls = document.select(".novel_list ul");
 
-        for(Element ul:uls){
+        for (Element ul : uls) {
             Elements elements = ul.select("li a");
-            for(Element element:elements){
-                String title=element.text();
-                String chapterUrl=element.absUrl("href");
-                Chapter chapter=new Chapter();
+            for (Element element : elements) {
+                String title = element.text();
+                String chapterUrl = element.absUrl("href");
+                Chapter chapter = new Chapter();
                 chapter.setChapterName(title);
                 chapter.setChapterUrl(chapterUrl);
                 chapter.setChapterBookId(1L);

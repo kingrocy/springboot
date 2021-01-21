@@ -1,76 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yunhui.mapper.ChapterContentMapper">
-  <resultMap id="BaseResultMap" type="com.yunhui.bean.ChapterContent">
-    <id column="chapter_content_id" jdbcType="BIGINT" property="chapterContentId" />
-    <result column="chapter_id" jdbcType="BIGINT" property="chapterId" />
-  </resultMap>
+    <resultMap id="BaseResultMap" type="com.yunhui.bean.ChapterContent">
+        <id column="chapter_content_id" jdbcType="BIGINT" property="chapterContentId"/>
+        <result column="chapter_id" jdbcType="BIGINT" property="chapterId"/>
+    </resultMap>
 
-  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.yunhui.bean.ChapterContent">
-    <result column="chapter_content_detail" jdbcType="LONGVARCHAR" property="chapterContentDetail" />
-  </resultMap>
+    <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="com.yunhui.bean.ChapterContent">
+        <result column="chapter_content_detail" jdbcType="LONGVARCHAR" property="chapterContentDetail"/>
+    </resultMap>
 
 
-  <sql id="Base_Column_List">
+    <sql id="Base_Column_List">
     chapter_content_id, chapter_id
   </sql>
-  <sql id="Blob_Column_List">
+    <sql id="Blob_Column_List">
     chapter_content_detail
   </sql>
 
-  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
-    select 
-    <include refid="Base_Column_List" />
-    ,
-    <include refid="Blob_Column_List" />
-    from chapter_content
-    where chapter_content_id = #{chapterContentId,jdbcType=BIGINT}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+    <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="ResultMapWithBLOBs">
+        select
+        <include refid="Base_Column_List"/>
+        ,
+        <include refid="Blob_Column_List"/>
+        from chapter_content
+        where chapter_content_id = #{chapterContentId,jdbcType=BIGINT}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
     delete from chapter_content
     where chapter_content_id = #{chapterContentId,jdbcType=BIGINT}
   </delete>
 
 
-  <insert id="insertSelective" parameterType="com.yunhui.bean.ChapterContent">
-    insert into chapter_content
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="chapterContentId != null">
-        chapter_content_id,
-      </if>
-      <if test="chapterId != null">
-        chapter_id,
-      </if>
-      <if test="chapterContentDetail != null">
-        chapter_content_detail,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="chapterContentId != null">
-        #{chapterContentId,jdbcType=BIGINT},
-      </if>
-      <if test="chapterId != null">
-        #{chapterId,jdbcType=BIGINT},
-      </if>
-      <if test="chapterContentDetail != null">
-        #{chapterContentDetail,jdbcType=LONGVARCHAR},
-      </if>
-    </trim>
-  </insert>
+    <insert id="insertSelective" parameterType="com.yunhui.bean.ChapterContent">
+        insert into chapter_content
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="chapterContentId != null">
+                chapter_content_id,
+            </if>
+            <if test="chapterId != null">
+                chapter_id,
+            </if>
+            <if test="chapterContentDetail != null">
+                chapter_content_detail,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="chapterContentId != null">
+                #{chapterContentId,jdbcType=BIGINT},
+            </if>
+            <if test="chapterId != null">
+                #{chapterId,jdbcType=BIGINT},
+            </if>
+            <if test="chapterContentDetail != null">
+                #{chapterContentDetail,jdbcType=LONGVARCHAR},
+            </if>
+        </trim>
+    </insert>
 
-  <update id="updateByPrimaryKeySelective" parameterType="com.yunhui.bean.ChapterContent">
-    update chapter_content
-    <set>
-      <if test="chapterId != null">
-        chapter_id = #{chapterId,jdbcType=BIGINT},
-      </if>
-      <if test="chapterContentDetail != null">
-        chapter_content_detail = #{chapterContentDetail,jdbcType=LONGVARCHAR},
-      </if>
-    </set>
-    where chapter_content_id = #{chapterContentId,jdbcType=BIGINT}
-  </update>
-  <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.yunhui.bean.ChapterContent">
+    <update id="updateByPrimaryKeySelective" parameterType="com.yunhui.bean.ChapterContent">
+        update chapter_content
+        <set>
+            <if test="chapterId != null">
+                chapter_id = #{chapterId,jdbcType=BIGINT},
+            </if>
+            <if test="chapterContentDetail != null">
+                chapter_content_detail = #{chapterContentDetail,jdbcType=LONGVARCHAR},
+            </if>
+        </set>
+        where chapter_content_id = #{chapterContentId,jdbcType=BIGINT}
+    </update>
+    <update id="updateByPrimaryKeyWithBLOBs" parameterType="com.yunhui.bean.ChapterContent">
     update chapter_content
     set chapter_id = #{chapterId,jdbcType=BIGINT},
       chapter_content_detail = #{chapterContentDetail,jdbcType=LONGVARCHAR}

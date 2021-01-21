@@ -20,15 +20,15 @@ public class TestShardingJdbc {
     UserMapper userMapper;
 
     @Test
-    public void test1(){
+    public void test1() {
         System.out.println(userMapper.selectByPK(1));
     }
 
 
     @Test
-    public void test2(){
+    public void test2() {
 
-        User user=new User();
+        User user = new User();
 
         user.setUserId(3);
         user.setUserName("jerry");

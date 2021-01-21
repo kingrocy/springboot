@@ -14,9 +14,7 @@ import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.serializer.Jackson2JsonRedisSerializer;
-import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
-import org.springframework.http.converter.json.Jackson2ObjectMapperBuilder;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
@@ -25,27 +23,33 @@ import redis.clients.jedis.JedisPoolConfig;
 public class RedisConfiguration {
 
 
-    private @Value("${jedis.pool.host}") String redisHost;
-    private @Value("${jedis.pool.port}") int redisPort;
-    private @Value("${jedis.pool.config.maxTotal}")int maxTotal;
-    private @Value("${jedis.pool.config.maxIdle}")int maxIdle;
-    private @Value("${jedis.pool.config.maxWaitMillis}")int maxWaitMillis;
-    private @Value("${jedis.pool.password}")String password;
+    private @Value("${jedis.pool.host}")
+    String redisHost;
+    private @Value("${jedis.pool.port}")
+    int redisPort;
+    private @Value("${jedis.pool.config.maxTotal}")
+    int maxTotal;
+    private @Value("${jedis.pool.config.maxIdle}")
+    int maxIdle;
+    private @Value("${jedis.pool.config.maxWaitMillis}")
+    int maxWaitMillis;
+    private @Value("${jedis.pool.password}")
+    String password;
 
-    @Bean(name= "jedis.pool")
+    @Bean(name = "jedis.pool")
     @Autowired
     public JedisPool jedisPool(@Qualifier("jedis.pool.config") JedisPoolConfig config,
-                               @Value("${jedis.pool.host}")String host,
-                               @Value("${jedis.pool.port}")int port,
-                               @Value("${jedis.pool.timeout}")int timeout,
-                               @Value("${jedis.pool.password}")String password) {
-        return new JedisPool(config, host, port,timeout,password);
+                               @Value("${jedis.pool.host}") String host,
+                               @Value("${jedis.pool.port}") int port,
+                               @Value("${jedis.pool.timeout}") int timeout,
+                               @Value("${jedis.pool.password}") String password) {
+        return new JedisPool(config, host, port, timeout, password);
     }
 
-    @Bean(name= "jedis.pool.config")
-    public JedisPoolConfig jedisPoolConfig (@Value("${jedis.pool.config.maxTotal}")int maxTotal,
-                                            @Value("${jedis.pool.config.maxIdle}")int maxIdle,
-                                            @Value("${jedis.pool.config.maxWaitMillis}")int maxWaitMillis) {
+    @Bean(name = "jedis.pool.config")
+    public JedisPoolConfig jedisPoolConfig(@Value("${jedis.pool.config.maxTotal}") int maxTotal,
+                                           @Value("${jedis.pool.config.maxIdle}") int maxIdle,
+                                           @Value("${jedis.pool.config.maxWaitMillis}") int maxWaitMillis) {
         JedisPoolConfig config = new JedisPoolConfig();
         config.setMaxTotal(maxTotal);
         config.setMaxIdle(maxIdle);
@@ -60,14 +64,14 @@ public class RedisConfiguration {
         factory.setHostName(redisHost);
         factory.setPort(redisPort);
         factory.setPassword(password);
-        factory.setPoolConfig(jedisPoolConfig(maxTotal,maxIdle,maxWaitMillis));
+        factory.setPoolConfig(jedisPoolConfig(maxTotal, maxIdle, maxWaitMillis));
         factory.setUsePool(true);
         return factory;
     }
 
 
     @Bean
-    RedisTemplate<String, Object > redisTemplate() {
+    RedisTemplate<String, Object> redisTemplate() {
         System.out.println("init redisTemplate");
         RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(jedisConnectionFactory());
@@ -84,9 +88,9 @@ public class RedisConfiguration {
     }
 
     @Bean
-    public RedisCacheManager redisCacheManager(){
+    public RedisCacheManager redisCacheManager() {
         System.out.println("init redisCacheManager");
-        RedisCacheManager redisCacheManager=new RedisCacheManager(redisTemplate());
+        RedisCacheManager redisCacheManager = new RedisCacheManager(redisTemplate());
         return redisCacheManager;
     }
 

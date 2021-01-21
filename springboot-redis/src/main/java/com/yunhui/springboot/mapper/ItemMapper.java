@@ -18,7 +18,7 @@ public interface ItemMapper {
 
     long add(Item item);
 
-    long update(@Param("item")Item item);
+    long update(@Param("item") Item item);
 
-    long delete(@Param("itemId")int itemId);
+    long delete(@Param("itemId") int itemId);
 }

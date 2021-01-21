@@ -3,19 +3,29 @@ package com.yunhui.enums;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-/**
- * @Date : 2019-07-16 17:36
- * @Author : dushaoyun[dushaoyun@souche.com]
- * @CopyRight : DataTeam @ SouChe Inc
- * @Desc :
- */
 @AllArgsConstructor
 @Getter
-public enum  WordTypeEnum {
+public enum WordTypeEnum {
 
 
-    FOURTH(1);
+    FOURTH(1),
+
+
+    KAOYAN(5),
+
+    ;
 
     private Integer key;
+
+
+    public static WordTypeEnum getInstance(Integer key) {
+        for (WordTypeEnum value : values()) {
+            if (value.key.equals(key)) {
+                return value;
+
+            }
+        }
+        return null;
+    }
 
 }

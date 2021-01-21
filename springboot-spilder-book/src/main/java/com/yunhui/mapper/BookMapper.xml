@@ -1,86 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.yunhui.mapper.BookMapper">
-  <resultMap id="BaseResultMap" type="com.yunhui.bean.Book">
-    <id column="book_id" jdbcType="INTEGER" property="bookId" />
-    <result column="book_name" jdbcType="VARCHAR" property="bookName" />
-    <result column="book_author" jdbcType="VARCHAR" property="bookAuthor" />
-    <result column="book_type" jdbcType="VARCHAR" property="bookType" />
-    <result column="book_url" jdbcType="VARCHAR" property="bookUrl" />
-  </resultMap>
+    <resultMap id="BaseResultMap" type="com.yunhui.bean.Book">
+        <id column="book_id" jdbcType="INTEGER" property="bookId"/>
+        <result column="book_name" jdbcType="VARCHAR" property="bookName"/>
+        <result column="book_author" jdbcType="VARCHAR" property="bookAuthor"/>
+        <result column="book_type" jdbcType="VARCHAR" property="bookType"/>
+        <result column="book_url" jdbcType="VARCHAR" property="bookUrl"/>
+    </resultMap>
 
-  <sql id="Base_Column_List">
+    <sql id="Base_Column_List">
     book_id, book_name, book_author, book_type, book_url
   </sql>
 
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from book
-    where book_id = #{bookId,jdbcType=INTEGER}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from book
+        where book_id = #{bookId,jdbcType=INTEGER}
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from book
     where book_id = #{bookId,jdbcType=INTEGER}
   </delete>
 
 
-  <insert id="insertSelective" parameterType="com.yunhui.bean.Book">
-    insert into book
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="bookId != null">
-        book_id,
-      </if>
-      <if test="bookName != null">
-        book_name,
-      </if>
-      <if test="bookAuthor != null">
-        book_author,
-      </if>
-      <if test="bookType != null">
-        book_type,
-      </if>
-      <if test="bookUrl != null">
-        book_url,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="bookId != null">
-        #{bookId,jdbcType=INTEGER},
-      </if>
-      <if test="bookName != null">
-        #{bookName,jdbcType=VARCHAR},
-      </if>
-      <if test="bookAuthor != null">
-        #{bookAuthor,jdbcType=VARCHAR},
-      </if>
-      <if test="bookType != null">
-        #{bookType,jdbcType=VARCHAR},
-      </if>
-      <if test="bookUrl != null">
-        #{bookUrl,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
+    <insert id="insertSelective" parameterType="com.yunhui.bean.Book">
+        insert into book
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="bookId != null">
+                book_id,
+            </if>
+            <if test="bookName != null">
+                book_name,
+            </if>
+            <if test="bookAuthor != null">
+                book_author,
+            </if>
+            <if test="bookType != null">
+                book_type,
+            </if>
+            <if test="bookUrl != null">
+                book_url,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="bookId != null">
+                #{bookId,jdbcType=INTEGER},
+            </if>
+            <if test="bookName != null">
+                #{bookName,jdbcType=VARCHAR},
+            </if>
+            <if test="bookAuthor != null">
+                #{bookAuthor,jdbcType=VARCHAR},
+            </if>
+            <if test="bookType != null">
+                #{bookType,jdbcType=VARCHAR},
+            </if>
+            <if test="bookUrl != null">
+                #{bookUrl,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
 
 
-  <update id="updateByPrimaryKeySelective" parameterType="com.yunhui.bean.Book">
-    update book
-    <set>
-      <if test="bookName != null">
-        book_name = #{bookName,jdbcType=VARCHAR},
-      </if>
-      <if test="bookAuthor != null">
-        book_author = #{bookAuthor,jdbcType=VARCHAR},
-      </if>
-      <if test="bookType != null">
-        book_type = #{bookType,jdbcType=VARCHAR},
-      </if>
-      <if test="bookUrl != null">
-        book_url = #{bookUrl,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where book_id = #{bookId,jdbcType=INTEGER}
-  </update>
+    <update id="updateByPrimaryKeySelective" parameterType="com.yunhui.bean.Book">
+        update book
+        <set>
+            <if test="bookName != null">
+                book_name = #{bookName,jdbcType=VARCHAR},
+            </if>
+            <if test="bookAuthor != null">
+                book_author = #{bookAuthor,jdbcType=VARCHAR},
+            </if>
+            <if test="bookType != null">
+                book_type = #{bookType,jdbcType=VARCHAR},
+            </if>
+            <if test="bookUrl != null">
+                book_url = #{bookUrl,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where book_id = #{bookId,jdbcType=INTEGER}
+    </update>
 
 </mapper>

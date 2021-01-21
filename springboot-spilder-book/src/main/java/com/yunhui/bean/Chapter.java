@@ -27,12 +27,12 @@ public class Chapter {
         this.chapterName = chapterName == null ? null : chapterName.trim();
     }
 
-    public void setChapterUrl(String chapterUrl) {
-        this.chapterUrl = chapterUrl;
-    }
-
     public String getChapterUrl() {
         return chapterUrl;
+    }
+
+    public void setChapterUrl(String chapterUrl) {
+        this.chapterUrl = chapterUrl;
     }
 
     public String getChapterDeatil() {

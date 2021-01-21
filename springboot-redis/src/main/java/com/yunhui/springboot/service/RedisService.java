@@ -1,4 +1,5 @@
 package com.yunhui.springboot.service;
+
 import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -25,8 +26,8 @@ public class RedisService {
     /**
      * 判断指定key是否存在
      *
-     * @return 如果存在，返回true，否则返回false
      * @param key key
+     * @return 如果存在，返回true，否则返回false
      */
     public boolean exists(final String key) {
         Jedis jedis = null;
@@ -43,6 +44,7 @@ public class RedisService {
 
     /**
      * 删除keys
+     *
      * @param keys
      * @return
      */
@@ -61,6 +63,7 @@ public class RedisService {
 
     /**
      * 重命名key
+     *
      * @param oldkey
      * @param newkey
      * @return
@@ -79,6 +82,7 @@ public class RedisService {
 
     /**
      * 设置key的过期时间
+     *
      * @param key
      * @param seconds
      * @return
@@ -97,19 +101,20 @@ public class RedisService {
 
 
     /**
-     *  将keys插入到列表key的表尾 并且仅当key存在并且是一个列表
-     *  当key不存在 rpushx 什么也不做
+     * 将keys插入到列表key的表尾 并且仅当key存在并且是一个列表
+     * 当key不存在 rpushx 什么也不做
+     *
      * @param key
      * @param keys
      * @return 返回的是列表的长度
      */
-    public  long  rpushxTolist(final String key,String... keys){
+    public long rpushxTolist(final String key, String... keys) {
         Jedis jedis = null;
 
         try {
             jedis = getPool().getResource();
 
-            return jedis.rpushx(key,keys);
+            return jedis.rpushx(key, keys);
 
         } finally {
             if (jedis != null) {
@@ -121,20 +126,20 @@ public class RedisService {
 
 
     /**
-     *
      * 将keys插入到列表key的表尾 如果key不存在，会创建一个空列表然后再执行rpush
      * 当key不是一个列表类型时，返回一个错误
+     *
      * @param key
      * @param keys
      * @return
      */
-    public  long rpushTolist(final String key,String... keys){
+    public long rpushTolist(final String key, String... keys) {
         Jedis jedis = null;
 
         try {
             jedis = getPool().getResource();
 
-            return jedis.rpush(key,keys);
+            return jedis.rpush(key, keys);
 
         } finally {
             if (jedis != null) {
@@ -145,21 +150,21 @@ public class RedisService {
     }
 
     /**
-     *
      * 将一个或多个 member 元素加入到集合 key 当中，已经存在于集合的 member 元素将被忽略。
      * 假如 key 不存在，则创建一个只包含 member 元素作成员的集合。
      * 当 key 不是集合类型时，返回一个错误。
+     *
      * @param key
      * @param keys
      * @return
      */
-    public  long saddToSet(final String key,String... keys){
+    public long saddToSet(final String key, String... keys) {
         Jedis jedis = null;
 
         try {
             jedis = getPool().getResource();
 
-            return jedis.sadd(key,keys);
+            return jedis.sadd(key, keys);
 
         } finally {
             if (jedis != null) {
@@ -168,18 +173,17 @@ public class RedisService {
         }
 
     }
-
-
 
 
     /**
      * 插入或更新一个 value 到列表中，并指定index
+     *
      * @param key
      * @param value
      * @param target
      * @return
      */
-    public long insertOrUpdateList(final String key,String value,int target){
+    public long insertOrUpdateList(final String key, String value, int target) {
 
         Jedis jedis = null;
 
@@ -187,36 +191,36 @@ public class RedisService {
             jedis = getPool().getResource();
 
             //查询value是否在list里
-            List<String>  resultants  =  jedis.lrange(key,0,-1);
+            List<String> resultants = jedis.lrange(key, 0, -1);
 
 
-            if(CollectionUtils.isEmpty(resultants)){
+            if (CollectionUtils.isEmpty(resultants)) {
                 //空list
-                return jedis.rpush(key,value);
+                return jedis.rpush(key, value);
 
             }
             //找到value在list中的下标
             int index = resultants.indexOf(value);
 
-            if(index == -1){
+            if (index == -1) {
                 //没有找到下标，等于创建或插入
                 try {
-                    resultants.add(target,value);
-                }catch (IndexOutOfBoundsException e){
+                    resultants.add(target, value);
+                } catch (IndexOutOfBoundsException e) {
                     //越界修改失败
                     return 0;
                 }
-            }else{
+            } else {
                 //调整位置
                 try {
 
                     //删除原有位置上的element,采用linkedlist
                     List<String> templist = new LinkedList<String>(resultants);
                     templist.remove(index);
-                    templist.add(target,value);
+                    templist.add(target, value);
                     resultants = templist;
 
-                }catch (IndexOutOfBoundsException e){
+                } catch (IndexOutOfBoundsException e) {
                     //越界修改失败
                     return 0;
                 }
@@ -225,7 +229,7 @@ public class RedisService {
             Transaction t = jedis.multi();
             //重新设置进去
             t.del(key);
-            t.rpush(key,resultants.toArray(new String[resultants.size()]));
+            t.rpush(key, resultants.toArray(new String[resultants.size()]));
             List execs = t.exec();
 
             return execs.size();
@@ -241,6 +245,7 @@ public class RedisService {
 
     /**
      * 获取key对应的对象
+     *
      * @param clazz
      * @param key
      * @param <T>
@@ -262,6 +267,7 @@ public class RedisService {
 
     /**
      * 获取key对应的值
+     *
      * @param key
      * @return
      */
@@ -280,6 +286,7 @@ public class RedisService {
 
     /**
      * 批量查询keys对应的对象
+     *
      * @param clazz
      * @param keys
      * @param <T>
@@ -306,6 +313,7 @@ public class RedisService {
 
     /**
      * 将对象设置为key对应的value
+     *
      * @param key
      * @param value
      * @param <T>
@@ -327,6 +335,7 @@ public class RedisService {
 
     /**
      * 设置key-value
+     *
      * @param key
      * @param value
      * @return
@@ -345,19 +354,19 @@ public class RedisService {
     }
 
     /**
-     *
      * 返回列表 key 中指定区间内的元素 0代表第一个元素 -1代表最后一个元素 -2代表倒数第二个元素
+     *
      * @param key
      * @param start
      * @param end
      * @return
      */
-    public List<String> lrange(String key, long start,long end) {
+    public List<String> lrange(String key, long start, long end) {
         Jedis jedis = null;
         try {
             jedis = getPool().getResource();
 
-            return jedis.lrange(key,start,end);
+            return jedis.lrange(key, start, end);
         } finally {
             if (jedis != null) {
                 jedis.close();
@@ -367,6 +376,7 @@ public class RedisService {
 
     /**
      * 设置key-value 并指定过期时间
+     *
      * @param key
      * @param seconds
      * @param value
@@ -390,6 +400,7 @@ public class RedisService {
     /**
      * 同时设置一个或多个 key-value键值对
      * 如果某个给定 key 已经存在，那么 MSET 会用新值覆盖原来的旧值
+     *
      * @param map
      * @param <T>
      * @return
@@ -417,6 +428,7 @@ public class RedisService {
     /**
      * 同时设置一个或多个 key-value 对，当且仅当所有给定 key 都不存在。
      * 即使只有一个给定 key 已存在， MSETNX 也会拒绝执行所有给定 key 的设置操作。
+     *
      * @param map
      * @param <T>
      * @return
@@ -444,8 +456,9 @@ public class RedisService {
 
     /**
      * 将哈希表 key 中的域 field 的值设为 value 。
-      如果 key 不存在，一个新的哈希表被创建并进行 HSET 操作。
-      如果域 field 已经存在于哈希表中，旧值将被覆盖。
+     * 如果 key 不存在，一个新的哈希表被创建并进行 HSET 操作。
+     * 如果域 field 已经存在于哈希表中，旧值将被覆盖。
+     *
      * @param key
      * @param field
      * @param value
@@ -458,7 +471,7 @@ public class RedisService {
 
             return jedis.hset(key, field, value).intValue();
         } finally {
-            if (jedis != null){
+            if (jedis != null) {
                 jedis.close();
             }
         }
@@ -466,6 +479,7 @@ public class RedisService {
 
     /**
      * 返回哈希表 key 中给定域 field 的值。
+     *
      * @param key
      * @param field
      * @return
@@ -477,7 +491,7 @@ public class RedisService {
 
             return jedis.hget(key, field);
         } finally {
-            if (jedis != null){
+            if (jedis != null) {
                 jedis.close();
             }
         }
@@ -485,7 +499,8 @@ public class RedisService {
 
     /**
      * 返回集合 key 中的所有成员。
-      不存在的 key 被视为空集合。
+     * 不存在的 key 被视为空集合。
+     *
      * @param key
      * @return
      */
@@ -496,7 +511,7 @@ public class RedisService {
 
             return jedis.smembers(key);
         } finally {
-            if (jedis != null){
+            if (jedis != null) {
                 jedis.close();
 
             }
@@ -505,6 +520,7 @@ public class RedisService {
 
     /**
      * 返回哈希表 key 中，所有的域和值。
+     *
      * @param key
      * @return
      */
@@ -515,7 +531,7 @@ public class RedisService {
 
             return jedis.hgetAll(key);
         } finally {
-            if (jedis != null){
+            if (jedis != null) {
                 jedis.close();
             }
         }
@@ -523,12 +539,13 @@ public class RedisService {
 
 
     /**
-     查找所有符合给定模式 pattern 的 key 。
-     KEYS * 匹配数据库中所有 key 。
-     KEYS h?llo 匹配 hello ， hallo 和 hxllo 等。
-     KEYS h*llo 匹配 hllo 和 heeeeello 等。
-     KEYS h[ae]llo 匹配 hello 和 hallo ，但不匹配 hillo 。
-     特殊符号用 \ 隔开
+     * 查找所有符合给定模式 pattern 的 key 。
+     * KEYS * 匹配数据库中所有 key 。
+     * KEYS h?llo 匹配 hello ， hallo 和 hxllo 等。
+     * KEYS h*llo 匹配 hllo 和 heeeeello 等。
+     * KEYS h[ae]llo 匹配 hello 和 hallo ，但不匹配 hillo 。
+     * 特殊符号用 \ 隔开
+     *
      * @param key
      * @return
      */
@@ -539,7 +556,7 @@ public class RedisService {
 
             return jedis.keys(key);
         } finally {
-            if (jedis != null){
+            if (jedis != null) {
                 jedis.close();
             }
         }
@@ -547,6 +564,7 @@ public class RedisService {
 
     /**
      * 删除哈希表 key 中的一个或多个指定域，不存在的域将被忽略。
+     *
      * @param hashKey
      * @param taskId
      * @return
@@ -557,7 +575,7 @@ public class RedisService {
             jedis = getPool().getResource();
             return jedis.hdel(hashKey, taskId);
         } finally {
-            if (jedis != null){
+            if (jedis != null) {
                 jedis.close();
             }
         }
@@ -565,8 +583,8 @@ public class RedisService {
 
 
     /**
-     *
      * 批量从list中删除项
+     *
      * @param key
      * @param elements list中的element，即需要删除的项
      * @return
@@ -604,13 +622,13 @@ public class RedisService {
     }
 
     /**
-     *
      * 批量从set中删除项
+     *
      * @param key
      * @param element list中的element，即需要删除的项
      * @return
      */
-    public long removeElementFormSet(String key,String... element){
+    public long removeElementFormSet(String key, String... element) {
         Jedis jedis = null;
         try {
             jedis = pool.getResource();
@@ -624,8 +642,9 @@ public class RedisService {
 
     /**
      * 将一个或多个值 value 插入到列表 key 的表头
-      如果 key 不存在，一个空列表会被创建并执行 LPUSH 操作。
-      当 key 存在但不是列表类型时，返回一个错误。
+     * 如果 key 不存在，一个空列表会被创建并执行 LPUSH 操作。
+     * 当 key 存在但不是列表类型时，返回一个错误。
+     *
      * @param key
      * @param args
      * @return
@@ -644,6 +663,7 @@ public class RedisService {
 
     /**
      * 移出并获取列表的最后一个元素， 如果列表没有元素会阻塞列表直到等待超时或发现可弹出元素为止。
+     *
      * @param key
      * @param timout
      * @return
@@ -716,7 +736,7 @@ public class RedisService {
         }
     }
 
-    public List<String> sort(String key,String condition,boolean isAsc){
+    public List<String> sort(String key, String condition, boolean isAsc) {
 
 
         Jedis jedis = null;
@@ -725,17 +745,17 @@ public class RedisService {
 
             //String key="MT-5-5-0";
 
-            StringBuilder sb=new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             sb.append(key);
             sb.append("-*->");
             sb.append(condition);
 
-            SortingParams sortingParams=new SortingParams();
+            SortingParams sortingParams = new SortingParams();
 
             sortingParams.by(sb.toString());
-            if(isAsc){
+            if (isAsc) {
                 sortingParams.asc();
-            }else{
+            } else {
                 sortingParams.desc();
             }
 

@@ -15,8 +15,8 @@ public class CoreController {
 
 
     @GetMapping("user/{id}")
-    public User get(@PathVariable("id") Long id){
-        User user=new User();
+    public User get(@PathVariable("id") Long id) {
+        User user = new User();
         user.setAge(24);
         user.setId(id);
         user.setName("dusy");
@@ -25,9 +25,9 @@ public class CoreController {
 
 
     @PostMapping("user/login")
-    public User login(@RequestBody Account account){
-        if(account.getAccount().equals("dusy")&&account.getPasswd().equals("123456")){
-            User user=new User();
+    public User login(@RequestBody Account account) {
+        if (account.getAccount().equals("dusy") && account.getPasswd().equals("123456")) {
+            User user = new User();
             user.setAge(24);
             user.setId(123456L);
             user.setName("dusy");

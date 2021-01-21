@@ -35,26 +35,26 @@ public class CoreController {
     ChapterContentMapper chapterContentMapper;
 
     @GetMapping("/chaperSpilder")
-    public void chapterContentSpilder(){
-        List<Chapter> chapters=chapterMapper.listChapters(1L);
+    public void chapterContentSpilder() {
+        List<Chapter> chapters = chapterMapper.listChapters(1L);
 
-        int count=chapters.size();
+        int count = chapters.size();
 
         //每个线程爬取100章
-        final int tasks=100;
+        final int tasks = 100;
 
         //线程总数
-        final int threads=(count%100==0)?(count/100):(count/100+1);
+        final int threads = (count % 100 == 0) ? (count / 100) : (count / 100 + 1);
 
-        ExecutorService service= Executors.newFixedThreadPool(threads);
+        ExecutorService service = Executors.newFixedThreadPool(threads);
 
-        List<Future<String>> futures=new ArrayList<>();
+        List<Future<String>> futures = new ArrayList<>();
 
-        for(int i=1;i<=threads;i++){
-            int start=(i-1)*tasks;
-            int end=start+tasks;
-            if(i==threads){
-                end=count;
+        for (int i = 1; i <= threads; i++) {
+            int start = (i - 1) * tasks;
+            int end = start + tasks;
+            if (i == threads) {
+                end = count;
             }
             Future<String> future = service.submit(new ChapterCallable(chapters.subList(start, end), chapterContentMapper));
             futures.add(future);
@@ -62,8 +62,8 @@ public class CoreController {
 
         service.shutdown();
 
-        while(service.isTerminated()){
-            for(Future<String> future:futures){
+        while (service.isTerminated()) {
+            for (Future<String> future : futures) {
                 try {
                     System.out.println(future.get());
                 } catch (InterruptedException e) {
@@ -76,15 +76,15 @@ public class CoreController {
     }
 
     @GetMapping("/listChapters")
-    public PageInfo<Chapter> listChapters(@RequestParam(value = "pageIndex",defaultValue = "1")int pageIndex){
-        PageHelper.startPage(pageIndex,50);
+    public PageInfo<Chapter> listChapters(@RequestParam(value = "pageIndex", defaultValue = "1") int pageIndex) {
+        PageHelper.startPage(pageIndex, 50);
         List<Chapter> chapters = chapterMapper.listChapters(1L);
-        PageInfo<Chapter> pageInfo=new PageInfo<>(chapters,6);
+        PageInfo<Chapter> pageInfo = new PageInfo<>(chapters, 6);
         return pageInfo;
     }
 
     @GetMapping("/getChapterDetail")
-    public Chapter getChapterDetail(long chapterId){
+    public Chapter getChapterDetail(long chapterId) {
         return chapterMapper.getChapterDetail(chapterId);
     }
 

@@ -2,12 +2,6 @@ package com.yunhui.constant;
 
 import com.yunhui.enums.WordTypeEnum;
 
-/**
- * @Date : 2019-07-16 09:56
- * @Author : dushaoyun[dushaoyun@souche.com]
- * @CopyRight : DataTeam @ SouChe Inc
- * @Desc :
- */
 public class YouDictConstant {
 
 
@@ -20,17 +14,16 @@ public class YouDictConstant {
     private static final String RESOUCE_URL = "http://www.youdict.com/ciku/id_$type$_$frequency$_0_0_$page$.html";
 
 
-
-    public static String getUrl(WordTypeEnum wordTypeEnum,Integer frequency,Integer page){
-        String url=RESOUCE_URL;
-        if(wordTypeEnum!=null){
-            url=url.replace("$type$", wordTypeEnum.getKey().toString());
+    public static String getUrl(WordTypeEnum wordTypeEnum, Integer frequency, Integer page) {
+        String url = RESOUCE_URL;
+        if (wordTypeEnum != null) {
+            url = url.replace("$type$", wordTypeEnum.getKey().toString());
         }
-        if(frequency!=null){
-            url=url.replace("$frequency$", frequency.toString());
+        if (frequency != null) {
+            url = url.replace("$frequency$", frequency.toString());
         }
-        if(page!=null){
-            url=url.replace("$page$", page.toString());
+        if (page != null) {
+            url = url.replace("$page$", page.toString());
         }
         return url;
     }

@@ -1,8 +1,10 @@
 package com.yunhui.db.config;
+
 import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
 import javax.sql.DataSource;
 
 
@@ -16,15 +18,14 @@ public class DataSourceConfig {
 
     /**
      * 配置数据源1
+     *
      * @return
      */
-    @Bean(name="dataSource")
+    @Bean(name = "dataSource")
     @ConfigurationProperties(prefix = "db")
-    public DataSource db(){
+    public DataSource db() {
         return DataSourceBuilder.create().build();
     }
-
-
 
 
 }

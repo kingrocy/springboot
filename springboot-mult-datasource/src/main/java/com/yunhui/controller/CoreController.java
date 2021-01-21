@@ -21,13 +21,13 @@ public class CoreController {
 
     @TargetDataSource("db1")
     @GetMapping("/user1")
-    public User getUser1(){
+    public User getUser1() {
         return userMapper.selectByPK(1);
     }
 
     @TargetDataSource("db2")
     @GetMapping("/user2")
-    public User getUser2(){
+    public User getUser2() {
         return userMapper.selectByPK(1);
     }
 

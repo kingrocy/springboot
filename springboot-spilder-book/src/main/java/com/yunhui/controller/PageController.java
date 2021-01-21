@@ -13,12 +13,12 @@ public class PageController {
 
 
     @GetMapping("/chapters")
-    public String chapters(){
+    public String chapters() {
         return "chapters";
     }
 
     @GetMapping("details")
-    public String details(Long chapterId){
+    public String details(Long chapterId) {
         return "chapterDetails";
     }
 }

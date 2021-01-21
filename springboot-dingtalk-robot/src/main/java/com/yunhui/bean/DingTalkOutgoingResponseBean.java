@@ -4,14 +4,8 @@ import lombok.Data;
 
 import java.util.List;
 
-/**
- * @Date : 2019-07-15 16:10
- * @Author : dushaoyun[dushaoyun@souche.com]
- * @CopyRight : DataTeam @ SouChe Inc
- * @Desc :
- */
 @Data
-public class DingTalkOutgoingResponseBean{
+public class DingTalkOutgoingResponseBean {
 
 
     private String conversationId;

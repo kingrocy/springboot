@@ -19,7 +19,7 @@ public class CoreController {
     ItemService itemService;
 
     @GetMapping("/get/{id}")
-    public Item getItem(@PathVariable("id")Integer id){
+    public Item getItem(@PathVariable("id") Integer id) {
         return itemService.get(id);
     }
 

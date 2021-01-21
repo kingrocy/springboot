@@ -1,6 +1,7 @@
 package com.yunhui.mapper;
 
 import com.yunhui.bean.ChapterContent;
+
 public interface ChapterContentMapper {
 
     int deleteByPrimaryKey(Long chapterContentId);

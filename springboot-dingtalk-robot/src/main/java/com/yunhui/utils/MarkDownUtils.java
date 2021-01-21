@@ -1,11 +1,5 @@
 package com.yunhui.utils;
 
-/**
- * @Date : 2019-07-17 10:55
- * @Author : dushaoyun[dushaoyun@souche.com]
- * @CopyRight : DataTeam @ SouChe Inc
- * @Desc :
- */
 public class MarkDownUtils {
 
 
@@ -18,10 +12,13 @@ public class MarkDownUtils {
         return new MarkDownUtils();
     }
 
+    public static void main(String[] args) {
+        System.out.println("*");
+    }
+
     public String build() {
         return sb.toString();
     }
-
 
     private MarkDownUtils h(String text, Integer num) {
         for (int i = 0; i < num; i++) {
@@ -53,24 +50,18 @@ public class MarkDownUtils {
         return h(text, 5);
     }
 
-
-    public MarkDownUtils ul(String text){
+    public MarkDownUtils ul(String text) {
         sb.append("- ");
         sb.append(text);
         sb.append("\n");
         return this;
     }
 
-    public MarkDownUtils wordH(String word){
+    public MarkDownUtils wordH(String word) {
         String[] split = word.split("\r\n");
         for (String s : split) {
             ul(s);
         }
         return this;
-    }
-
-
-    public static void main(String[] args) {
-        System.out.println("*");
     }
 }
